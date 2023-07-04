@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "miFuente";
+  src: url(./fuentes/Gamer\ Station.ttf);
+}
+body {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  width: 100%;
+}
+.cabecera {
+  display: flex;
+  background-color: black;
+  flex-direction: row;
+  justify-content: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.letraRoja {
+  color: red;
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+}
+.letraRoja {
+  color: red;
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+}
+.letraAzul {
+  color: blue;
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+}
+.letraVerde {
+  color: green;
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+}
+.letraAmarilla {
+  color: yellow;
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+}
+.letraBlanca {
+  padding-right: 25px;
+  color: white;
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+}
+
+.contenedor {
+  padding-top: 100px;
+  width: 300px;
+  height: 300px;
+}
+
+.verde {
+  background-color: rgb(17, 155, 17);
+  border-top-left-radius: 200px;
+  height: 50%;
+  width: 50%;
+  opacity: 0.2;
+  float: left;
+}
+
+.rojo {
+  background-color: rgb(255, 23, 23);
+  border-top-right-radius: 200px;
+  height: 50%;
+  width: 50%;
+  opacity: 0.2;
+  float: left;
+}
+
+.azul {
+  background-color: rgb(59, 121, 255);
+  border-bottom-right-radius: 200px;
+  height: 50%;
+  width: 50%;
+  opacity: 0.2;
+  float: left;
+}
+
+.amarillo {
+  background-color: rgb(255, 255, 31);
+  border-bottom-left-radius: 200px;
+  height: 50%;
+  width: 50%;
+  opacity: 0.2;
+  float: left;
+}
+
+.boton {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+button {
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+}
