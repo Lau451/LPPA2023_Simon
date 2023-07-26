@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/reset.css" />
     <title>Simon</title>
   </head>
   <body>
@@ -21,22 +21,25 @@
         <p class="letraAmarilla">e</p>
       </div>
       <div class="contadores">
-        <p>PUNTAJE:</p>
-        <p>RONDA:</p>
-        <p>TIEMPO:</p>
+        <div class="puntuacion">
+          <p>PUNTAJE:</p>
+          <p id="puntaje"></p>
+        </div>
+        <div id="ronda"></div>
+        <div id="tiempo"></div>
       </div>
     </header>
     <main>
       <div class="juego">
-        <button class="verde"></button>
-        <button class="rojo"></button>
-        <button class="amarillo"></button>
-        <button class="azul"></button>
+        <button class="btn verde"></button>
+        <button class="btn rojo"></button>
+        <button class="btn amarillo"></button>
+        <button class="btn azul"></button>
       </div>
       <div class="boton">
-        <button class="comenzar">Comenzar</button>
+        <button id="comenzar">Comenzar</button>
       </div>
     </main>
-    <script src="app.js"></script>
+    <script src="./JS/simon.js"></script>
   </body>
 </html>
