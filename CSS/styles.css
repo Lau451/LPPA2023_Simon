@@ -272,4 +272,7 @@ button {
     font-weight: bold;
     cursor: pointer;
   }
+  .active {
+    opacity: 1;
+  }
 }
