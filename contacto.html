@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Simon</title>
-    <link rel="stylesheet" href="./CSS/estiloIndex.css" />
-    <link rel="stylesheet" href="./CSS/reset.css" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./CSS/estiloContacto.css" />
   </head>
   <body>
     <header>
@@ -22,21 +21,26 @@
       </div>
     </header>
     <main>
-      <div class="contenedor">
-        <div class="jugar">
-          <a class="efectos">JUGAR</a>
+      <form action="" class="formulario">
+        <div class="nombre">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" name="nombre" />
         </div>
-        <div class="contacto">
-          <a class="efectos">CONTACTO</a>
+
+        <div class="email">
+          <label for="email">Email</label>
+          <input type="email" name="email" />
         </div>
-        <div class="github">
-          <a class="efectos">GITHUB</a>
+
+        <div class="mensaje">
+          <label for="mensaje">Mensaje</label>
+          <textarea name="mensaje"></textarea>
         </div>
-        <div class="ranking">
-          <a class="efectos"> RANKING</a>
+
+        <div class="enviar">
+          <button type="submit" id="enviar">Enviar</button>
         </div>
-      </div>
+      </form>
     </main>
-    <script src="./JS/index.js"></script>
   </body>
 </html>

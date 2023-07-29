@@ -1,4 +1,5 @@
 var palabraJugar = document.querySelector(".jugar a");
+var palabraContacto = document.querySelector(".contacto a");
 var palabras = document.querySelectorAll(".efectos");
 
 // Para entrar al Simon
@@ -6,8 +7,13 @@ palabraJugar.addEventListener("click", jugarSimon);
 
 function jugarSimon() {
   window.location.href = "simon.html";
-  jugarSimon.classList.remove("efecto-clic");
-  jugarSimon.classList.add("efecto-clic");
+}
+
+//Para entrar a contactos
+palabraContacto.addEventListener("click", entrarContacto);
+
+function entrarContacto() {
+  window.location.href = "contacto.html";
 }
 
 // Para hacer zoom en las palabras

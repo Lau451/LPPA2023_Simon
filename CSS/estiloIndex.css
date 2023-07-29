@@ -60,40 +60,24 @@ header {
   flex-wrap: wrap;
 }
 
-.jugar {
+.contenedor div {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 15vh;
-  border: solid 0.6vw;
+  border: solid 0.6vw white;
+}
+.jugar {
   background-color: red;
 }
 .contacto {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 15vh;
-  border: solid 0.6vw;
   background-color: blue;
 }
 .github {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 15vh;
-  border: solid 0.6vw;
   background-color: green;
 }
 .ranking {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 15vh;
-  border: solid 0.6vw;
   background-color: yellow;
 }
 
@@ -108,4 +92,45 @@ main div a {
 
 .efecto-zoom {
   transition: transform 0.5s;
+}
+
+@media (max-width: 850px) {
+  .letraRoja,
+  .letraAzul,
+  .letraVerde,
+  .letraAmarilla,
+  .letraBlanca {
+    font-size: 12vw;
+  }
+  .contenedor {
+    margin: 5vw;
+  }
+  main div a {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .cabecera {
+    margin: 6vw;
+  }
+
+  .letraRoja,
+  .letraAzul,
+  .letraVerde,
+  .letraAmarilla,
+  .letraBlanca {
+    font-size: 15vw;
+  }
+
+  .contenedor {
+    margin: 5vw;
+  }
+  .contenedor div {
+    margin: 1vh;
+  }
+
+  main div a {
+    font-size: 6vw;
+  }
 }

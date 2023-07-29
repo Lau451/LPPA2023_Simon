@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "miFuente";
+  src: url(../fuentes/Gamer\ Station.ttf);
+}
+body {
+  background-color: black;
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vw;
+  margin-top: 2vw;
+}
+.letraRoja,
+.letraAzul,
+.letraVerde,
+.letraAmarilla,
+.letraBlanca {
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
+  font-family: "miFuente";
+  font-weight: bold;
+  font-size: 11vw;
+}
+
+.letraRoja {
+  color: red;
+}
+
+.letraAzul {
+  color: blue;
+}
+
+.letraVerde {
+  color: green;
+}
+
+.letraAmarilla {
+  color: yellow;
+}
+
+.letraBlanca {
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formulario {
+  width: 30vw; /* Ajustar el ancho del formulario */
+  margin: 1vw;
+  padding: 3vw;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  background-color: white;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 90%;
+  padding: 1vw;
+  margin-bottom: 2vw;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1vw;
+}
+
+.formulario textarea {
+  resize: vertical; /* Permite redimensionar verticalmente el textarea */
+}
+.enviar {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario button {
+  padding: 1vw 2vw;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .cabecera {
+    margin: 8vw;
+    margin-bottom: 4vw;
+  }
+  .letraRoja,
+  .letraAzul,
+  .letraVerde,
+  .letraAmarilla,
+  .letraBlanca {
+    font-size: 17vw;
+  }
+
+  .formulario {
+    width: 60vw;
+  }
+
+  .formulario label {
+    font-size: 4vw;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 3vw;
+    margin-bottom: 4vw;
+    font-size: 3vw;
+  }
+  .formulario button {
+    padding: 2vw 4vw;
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .cabecera {
+    margin: 25vw;
+  }
+  .letraRoja,
+  .letraAzul,
+  .letraVerde,
+  .letraAmarilla,
+  .letraBlanca {
+    font-size: 18vw;
+  }
+
+  .formulario {
+    width: 70vw;
+    height: 80vw;
+  }
+
+  .formulario label {
+    font-size: 6vw;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 3vw;
+    margin-bottom: 4vw;
+    font-size: 4vw;
+  }
+  .formulario button {
+    padding: 3vw 7vw;
+    font-size: 4vw;
+  }
+}
