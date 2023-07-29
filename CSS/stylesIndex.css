@@ -97,7 +97,15 @@ header {
   background-color: yellow;
 }
 
-main div p {
+main div a {
   font-size: 3vw;
   font-family: "miFuente";
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  color: black;
+}
+
+.efecto-zoom {
+  transition: transform 0.5s;
 }

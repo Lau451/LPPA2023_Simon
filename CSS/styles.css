@@ -119,14 +119,13 @@ header {
 .boton {
   display: flex;
   justify-content: center;
-  padding-top: 1vw;
   padding-bottom: 1vw;
   text-align: center;
 }
 
 button {
   font-family: "Balsamiq Sans", cursive;
-  font-size: 1.7vw;
+  font-size: 1.6vw;
   padding: 0.5vw 1.5vw;
   border: none;
   border-radius: 30px;
