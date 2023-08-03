@@ -5,13 +5,22 @@
 body {
   background-color: black;
 }
-
+header {
+  width: 100%;
+}
 .cabecera {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 10vw;
-  margin-top: 2vw;
+  align-items: center;
+  height: 11vw;
+  padding: 7vw;
+  box-sizing: border-box;
+}
+
+.letras {
+  display: flex;
+  flex-grow: 1; /* Añadimos esta propiedad para que las letras ocupen todo el espacio disponible */
+  justify-content: center;
 }
 .letraRoja,
 .letraAzul,
@@ -24,7 +33,7 @@ body {
     1px 30px 60px rgba(16, 16, 16, 0.5);
   font-family: "miFuente";
   font-weight: bold;
-  font-size: 11vw;
+  font-size: 10vw;
 }
 
 .letraRoja {
@@ -54,8 +63,9 @@ main {
 }
 .formulario {
   width: 30vw; /* Ajustar el ancho del formulario */
-  margin: 1vw;
-  padding: 3vw;
+  height: 25vw;
+  padding: 2vw;
+  padding-bottom: 3.5vw;
   border-radius: 10px;
   box-shadow: 0 0 5px rgb(255, 255, 255);
   background-color: white;
@@ -65,8 +75,7 @@ main {
   font-weight: bold;
 }
 
-.formulario input,
-.formulario textarea {
+.formulario input {
   width: 90%;
   padding: 1vw;
   margin-bottom: 2vw;
@@ -76,14 +85,27 @@ main {
 }
 
 .formulario textarea {
+  width: 90%;
+  padding: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1vw;
   resize: vertical; /* Permite redimensionar verticalmente el textarea */
 }
 .enviar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-
+.advertencias {
+  width: 15vw;
+  margin: auto;
+  padding-top: 1vw;
+  text-align: center;
+  color: red;
+}
 .formulario button {
+  margin: 1vw;
   padding: 1vw 2vw;
   border: none;
   border-radius: 5px;
@@ -107,18 +129,29 @@ main {
 
   .formulario {
     width: 60vw;
+    height: 65vw;
   }
 
   .formulario label {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
-  .formulario input,
-  .formulario textarea {
-    padding: 3vw;
+  .formulario input {
+    padding: 2vw;
     margin-bottom: 4vw;
     font-size: 3vw;
   }
+
+  .formulario textarea {
+    padding: 2vw;
+    margin-bottom: 3vw;
+    font-size: 3vw;
+  }
+
+  .advertencias {
+    width: 25vw;
+  }
+
   .formulario button {
     padding: 2vw 4vw;
     font-size: 3vw;
@@ -128,22 +161,26 @@ main {
 @media (max-width: 500px) {
   .cabecera {
     margin: 25vw;
+    margin-bottom: 15vw;
+  }
+  img {
+    width: 8vw;
   }
   .letraRoja,
   .letraAzul,
   .letraVerde,
   .letraAmarilla,
   .letraBlanca {
-    font-size: 18vw;
+    font-size: 15vw;
   }
 
   .formulario {
     width: 70vw;
-    height: 80vw;
+    height: 95vw;
   }
 
   .formulario label {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   .formulario input,
@@ -151,6 +188,9 @@ main {
     padding: 3vw;
     margin-bottom: 4vw;
     font-size: 4vw;
+  }
+  .advertencias {
+    width: 40vw;
   }
   .formulario button {
     padding: 3vw 7vw;

@@ -8,6 +8,7 @@ var enCurso = false;
 var mostrarRonda = document.getElementById("ronda");
 var mostrarTiempo = document.getElementById("tiempo");
 var comenzarTiempo, finTiempo, temporizador;
+var atras = document.getElementById("img");
 
 // Function to play the sound
 function reproducir(color) {
@@ -145,4 +146,11 @@ function obtenerColorAleatorio() {
 
 function actualizarRonda() {
   mostrarRonda.textContent = "RONDA: " + ronda;
+}
+
+// Para ir a home
+atras.addEventListener("click", retroceder);
+
+function retroceder() {
+  window.location.href = "index.html";
 }

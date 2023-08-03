@@ -9,38 +9,54 @@
   <body>
     <header>
       <div class="cabecera">
-        <p class="letraRoja">S</p>
-        <p class="letraAzul">i</p>
-        <p class="letraVerde">m</p>
-        <p class="letraAmarilla">o</p>
-        <p class="letraBlanca">n</p>
-        <p class="letraRoja">D</p>
-        <p class="letraAzul">i</p>
-        <p class="letraVerde">c</p>
-        <p class="letraAmarilla">e</p>
+        <img src="./IMG/atras (1).png" id="img" />
+        <div class="letras">
+          <p class="letraRoja">S</p>
+          <p class="letraAzul">i</p>
+          <p class="letraVerde">m</p>
+          <p class="letraAmarilla">o</p>
+          <p class="letraBlanca">n</p>
+          <p class="letraRoja">D</p>
+          <p class="letraAzul">i</p>
+          <p class="letraVerde">c</p>
+          <p class="letraAmarilla">e</p>
+        </div>
       </div>
     </header>
     <main>
-      <form action="" class="formulario">
+      <form
+        action="mailto:destinatario@example.com"
+        method="post"
+        enctype="text/plain"
+        class="formulario"
+      >
         <div class="nombre">
-          <label for="nombre">Nombre Completo</label>
-          <input type="text" name="nombre" />
+          <label for="name">Nombre Completo</label>
+          <input type="text" name="nombre" id="nombreInput" />
+          <span class="barra"></span>
         </div>
 
         <div class="email">
-          <label for="email">Email</label>
-          <input type="email" name="email" />
+          <label for="email">Correo Electrónico</label>
+          <input type="email" name="correo" id="correoInput" />
+          <span class="barra"></span>
         </div>
 
         <div class="mensaje">
           <label for="mensaje">Mensaje</label>
-          <textarea name="mensaje"></textarea>
+          <textarea name="mensaje" id="mensajeInput"></textarea>
+          <span class="barra"></span>
         </div>
 
         <div class="enviar">
+          <div>
+            <p class="advertencias" id="advertencias"></p>
+          </div>
+
           <button type="submit" id="enviar">Enviar</button>
         </div>
       </form>
     </main>
+    <script src="./JS/contacto.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 var palabraJugar = document.querySelector(".jugar a");
 var palabraContacto = document.querySelector(".contacto a");
-var palabraGithub= document.querySelector('.github a')
+var palabraGithub = document.querySelector(".github a");
 var palabras = document.querySelectorAll(".efectos");
 
 // Para entrar al Simon
@@ -21,8 +21,8 @@ function entrarContacto() {
 palabraGithub.addEventListener("click", entrarGithub);
 
 function entrarGithub() {
-  var url ="https://github.com/Lau451/LPPA2023_Simon" 
-  window.open(url,'_blank')
+  var url = "https://github.com/Lau451/LPPA2023_Simon";
+  window.open(url, "_blank");
 }
 
 // Para hacer zoom en las palabras

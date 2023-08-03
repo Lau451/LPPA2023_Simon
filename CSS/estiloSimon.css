@@ -16,12 +16,17 @@ header {
 
 .cabecera {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   padding-bottom: 0.5rem;
   box-sizing: border-box;
-  background-color: black;
+}
+
+.letras {
+  display: flex;
+  flex-grow: 1; /* Añadimos esta propiedad para que las letras ocupen todo el espacio disponible */
+  justify-content: center;
 }
 .letraRoja,
 .letraAzul,
@@ -72,6 +77,7 @@ header {
 }
 
 .juego {
+  margin-bottom: 1vw;
   width: 25vw;
   height: 25vw;
 }
@@ -119,7 +125,6 @@ header {
 .boton {
   display: flex;
   justify-content: center;
-  padding-bottom: 1vw;
   text-align: center;
 }
 
