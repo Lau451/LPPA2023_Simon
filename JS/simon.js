@@ -9,6 +9,10 @@ var mostrarRonda = document.getElementById("ronda");
 var mostrarTiempo = document.getElementById("tiempo");
 var comenzarTiempo, finTiempo, temporizador;
 var atras = document.getElementById("img");
+var entrar = document.getElementById("entrar");
+var nombreIngresado = document.getElementById("nombreIngresado");
+var contenedorModal = document.querySelector(".contenedorModal");
+var mensajeError = document.getElementById("mensajeError");
 
 // Function to play the sound
 function reproducir(color) {
@@ -153,4 +157,14 @@ atras.addEventListener("click", retroceder);
 
 function retroceder() {
   window.location.href = "index.html";
+}
+
+//Modal
+entrar.addEventListener("click", entrarJuego);
+function entrarJuego() {
+  if (nombreIngresado.value.length >= 3) {
+    contenedorModal.classList.add("show");
+  } else {
+    mensajeError.innerHTML = `El nombre debe tener como mínimo 3 caracteres`;
+  }
 }
