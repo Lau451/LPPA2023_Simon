@@ -242,6 +242,27 @@ button {
     font-size: 3vw;
     padding: 1vw 2.5vw;
   }
+
+  .modal {
+    width: 50vw;
+    height: 30vw;
+  }
+  .modal h1 {
+    padding-bottom: 3vw;
+    font-size: 3vw;
+  }
+
+  .modal input {
+    font-size: 3vw;
+  }
+
+  .modal p {
+    padding: 2vw;
+  }
+
+  .modal button {
+    font-size: 2.5vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -325,5 +346,26 @@ button {
   }
   .active {
     opacity: 1;
+  }
+  .modal {
+    width: 60vw;
+    height: 40vw;
+  }
+  .modal h1 {
+    font-size: 5vw;
+    margin-top: 3vw;
+  }
+
+  .modal input {
+    font-size: 3.5vw;
+  }
+
+  .modal p {
+    padding: 2vw;
+  }
+
+  .modal button {
+    font-size: 3vw;
+    margin-bottom: 2vw;
   }
 }
