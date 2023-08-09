@@ -10,6 +10,7 @@ var mostrarTiempo = document.getElementById("tiempo");
 var comenzarTiempo, finTiempo, temporizador;
 var puntaje = 1;
 var atras = document.getElementById("img");
+var atrasModal = document.getElementById("imgModal");
 var entrar = document.getElementById("entrar");
 var nombreIngresado = document.getElementById("nombreIngresado");
 var contenedorIngreso = document.querySelector(".contenedorIngreso");
@@ -20,6 +21,7 @@ var penalizacionTexto = document.getElementById("penalizacionTexto");
 var puntajeTotalTexto = document.getElementById("puntajeTotalTexto");
 var empezarDeNuevo = document.getElementById("reiniciar");
 var penalizacion;
+var puntajeTotal;
 
 document.addEventListener("DOMContentLoaded", function () {
   contenedorFinal.classList.add("ocultar");
@@ -62,6 +64,7 @@ function reiniciar() {
   actualizarRonda();
   actualizarMostrarTemp(0);
   deshabilitarJugador();
+  contenedorIngreso.classList.remove("ocultar");
 }
 
 function comenzarSecuencia() {
@@ -122,7 +125,7 @@ function clickJugador(event) {
     reproducirError();
     contenedorFinal.classList.remove("ocultar");
     actualizarPuntaje();
-    reiniciar();
+    guardarLocalStorage();
   } else {
     puntaje++;
 
@@ -166,18 +169,39 @@ function actualizarPuntaje() {
   puntajeDescontar = (puntaje - 1) * 1000;
   puntajeTexto.innerHTML = "PUNTAJE: " + puntajeDescontar;
   penalizacionTexto.innerHTML = "PENALIZACION: " + penalizacion;
-  puntajeTotalTexto.innerHTML =
-    " PUNTAJE TOTAL: " + (puntajeDescontar - penalizacion);
+  puntajeTotal = puntajeDescontar - penalizacion;
+  puntajeTotalTexto.innerHTML = " PUNTAJE TOTAL: " + puntajeTotal;
 }
 
 function actualizarRonda() {
   mostrarRonda.textContent = "RONDA: " + ronda;
 }
 
+//LocalStorage
+var partidasJugadas = [];
+function guardarLocalStorage() {
+  var fechaActual = new Date();
+  var partidaActual = {
+    nombre: nombreIngresado.value,
+    puntajeTotal: puntajeTotal,
+    ronda: ronda - 1,
+    fecha: fechaActual.toLocaleDateString(),
+    hora: fechaActual.toLocaleTimeString(),
+  };
+  partidasJugadas.push(partidaActual);
+
+  localStorage.setItem("partidasJugadas", JSON.stringify(partidasJugadas));
+}
+
 // Para ir a home
 atras.addEventListener("click", retroceder);
 
 function retroceder() {
+  window.location.href = "index.html";
+}
+atrasModal.addEventListener("click", retrocederModal);
+
+function retrocederModal() {
   window.location.href = "index.html";
 }
 
