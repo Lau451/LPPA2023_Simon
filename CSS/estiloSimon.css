@@ -175,6 +175,8 @@ button {
   height: 20vw;
   border-radius: 10px;
   background-color: white;
+  border: 4px solid transparent;
+  animation: borderAnimation 5s infinite;
 }
 
 .modal h1 {
@@ -209,6 +211,8 @@ button {
   height: 20vw;
   border-radius: 10px;
   background-color: white;
+  border: 4px solid transparent;
+  animation: borderAnimation 5s infinite;
 }
 .modalFinal h1 {
   padding-top: 1.2vw;
@@ -240,6 +244,20 @@ button {
 }
 #puntajeTotalTexto {
   color: blue;
+}
+@keyframes borderAnimation {
+  0% {
+    border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    border-image-slice: 1;
+  }
+  50% {
+    border-image: linear-gradient(45deg, #0000ff, #ff0000, #00ff00);
+    border-image-slice: 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, #00ff00, #0000ff, #ff0000);
+    border-image-slice: 1;
+  }
 }
 
 .modalFinal button {
@@ -338,6 +356,7 @@ button {
     padding: 1vw;
     font-size: 2.5vw;
   }
+
   .modalFinal button {
     margin: 1vw;
     font-size: 2.5vw;
