@@ -8,11 +8,22 @@ var enCurso = false;
 var mostrarRonda = document.getElementById("ronda");
 var mostrarTiempo = document.getElementById("tiempo");
 var comenzarTiempo, finTiempo, temporizador;
+var puntaje = 1;
 var atras = document.getElementById("img");
 var entrar = document.getElementById("entrar");
 var nombreIngresado = document.getElementById("nombreIngresado");
-var contenedorModal = document.querySelector(".contenedorModal");
+var contenedorIngreso = document.querySelector(".contenedorIngreso");
+var contenedorFinal = document.querySelector(".contenedorFinalPartida");
 var mensajeError = document.getElementById("mensajeError");
+var puntajeTexto = document.getElementById("puntajeTexto");
+var penalizacionTexto = document.getElementById("penalizacionTexto");
+var puntajeTotalTexto = document.getElementById("puntajeTotalTexto");
+var empezarDeNuevo = document.getElementById("reiniciar");
+var penalizacion;
+
+document.addEventListener("DOMContentLoaded", function () {
+  contenedorFinal.classList.add("ocultar");
+});
 
 // Function to play the sound
 function reproducir(color) {
@@ -31,7 +42,6 @@ botonComenzar.addEventListener("click", empezarJuego);
 function empezarJuego() {
   if (!enCurso) {
     enCurso = true;
-    botonComenzar.textContent = "Reiniciar";
     comenzarTemp();
     comenzarSecuencia();
     actualizarRonda();
@@ -47,6 +57,7 @@ function reiniciar() {
   secuenciaJuego = [];
   secuenciaJugador = [];
   ronda = 1;
+  puntaje = 1;
   clearInterval(temporizador);
   actualizarRonda();
   actualizarMostrarTemp(0);
@@ -56,9 +67,7 @@ function reiniciar() {
 function comenzarSecuencia() {
   var colorAleatorio = obtenerColorAleatorio();
   secuenciaJuego.push(colorAleatorio);
-
   deshabilitarJugador();
-
   iluminarSecuencia(secuenciaJuego, function () {
     habilitarJugador();
   });
@@ -108,11 +117,15 @@ function clickJugador(event) {
   secuenciaJugador.push(colorSeleccionado);
   iluminarBoton(colorSeleccionado);
   var rondaActual = secuenciaJugador.length;
+
   if (secuenciaJugador[rondaActual - 1] !== secuenciaJuego[rondaActual - 1]) {
-    reproducirError(); // Play the error sound when the button is incorrect
-    //alert("¡Perdiste! Inténtalo de nuevo.");
+    reproducirError();
+    contenedorFinal.classList.remove("ocultar");
+    actualizarPuntaje();
     reiniciar();
   } else {
+    puntaje++;
+
     if (rondaActual === ronda) {
       if (ronda === maxRonda) {
         alert("¡Ganaste!");
@@ -135,6 +148,7 @@ function comenzarTemp() {
 function actualizarTiempo() {
   var tiempoActual = new Date().getTime();
   var tiempoTranscurrido = Math.floor((tiempoActual - comenzarTiempo) / 1000);
+  penalizacion = tiempoTranscurrido * 45;
   actualizarMostrarTemp(tiempoTranscurrido);
 }
 
@@ -146,6 +160,14 @@ function obtenerColorAleatorio() {
   var colores = ["rojo", "azul", "verde", "amarillo"];
   var indiceAleatorio = Math.floor(Math.random() * colores.length);
   return colores[indiceAleatorio];
+}
+
+function actualizarPuntaje() {
+  puntajeDescontar = (puntaje - 1) * 1000;
+  puntajeTexto.innerHTML = "PUNTAJE: " + puntajeDescontar;
+  penalizacionTexto.innerHTML = "PENALIZACION: " + penalizacion;
+  puntajeTotalTexto.innerHTML =
+    " PUNTAJE TOTAL: " + (puntajeDescontar - penalizacion);
 }
 
 function actualizarRonda() {
@@ -163,8 +185,15 @@ function retroceder() {
 entrar.addEventListener("click", entrarJuego);
 function entrarJuego() {
   if (nombreIngresado.value.length >= 3) {
-    contenedorModal.classList.add("show");
+    contenedorIngreso.classList.add("ocultar");
   } else {
     mensajeError.innerHTML = `El nombre debe tener como mínimo 3 caracteres`;
   }
+}
+
+//Reiniciar el juego
+empezarDeNuevo.addEventListener("click", reiniciarJuego);
+function reiniciarJuego() {
+  reiniciar();
+  contenedorFinal.classList.add("ocultar");
 }

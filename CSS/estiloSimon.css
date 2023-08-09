@@ -146,7 +146,17 @@ button {
   background-color: rgb(255, 255, 255);
 }
 
-.contenedorModal {
+.contenedorIngreso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000a1;
+}
+
+.contenedorFinalPartida {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,10 +200,57 @@ button {
   color: white;
   background-color: black;
 }
+.modalFinal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40vw;
+  height: 20vw;
+  border-radius: 10px;
+  background-color: white;
+}
+.modalFinal h1 {
+  padding-top: 1.2vw;
+  padding-bottom: 0.7vw;
+  font-size: 2vw;
 
-.show {
-  pointer-events: none;
-  opacity: 0;
+  font-family: "miFuente";
+}
+#resumenPartida {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 25vw;
+  height: 35vw;
+  border: solid 0.3vw;
+}
+
+#resumenPartida div {
+  padding: 0.7vw;
+  font-size: 1.5vw;
+  font-family: "miFuente";
+}
+
+#puntajeTexto {
+  color: #1cff2d;
+}
+#penalizacionTexto {
+  color: red;
+}
+#puntajeTotalTexto {
+  color: blue;
+}
+
+.modalFinal button {
+  margin: 1vw;
+  font-size: 1.5vw;
+  color: white;
+  background-color: black;
+}
+
+.ocultar {
+  display: none;
 }
 
 @media (max-width: 850px) {
@@ -261,6 +318,28 @@ button {
   }
 
   .modal button {
+    font-size: 2.5vw;
+  }
+  .modalFinal {
+    width: 50vw;
+    height: 30vw;
+  }
+  .modalFinal h1 {
+    padding-top: 1.6vw;
+    padding-bottom: 0.9vw;
+    font-size: 3vw;
+  }
+  #resumenPartida {
+    width: 35vw;
+    height: 30vw;
+  }
+
+  #resumenPartida div {
+    padding: 1vw;
+    font-size: 2.5vw;
+  }
+  .modalFinal button {
+    margin: 1vw;
     font-size: 2.5vw;
   }
 }
@@ -355,6 +434,9 @@ button {
     font-size: 5vw;
     margin-top: 3vw;
   }
+  .contenedorFinalPartida .modal h1 {
+    font-size: 4vw;
+  }
 
   .modal input {
     font-size: 3.5vw;
@@ -367,5 +449,27 @@ button {
   .modal button {
     font-size: 3vw;
     margin-bottom: 2vw;
+  }
+  .modalFinal {
+    width: 70vw;
+    height: 50vw;
+  }
+  .modalFinal h1 {
+    padding-top: 2.5vw;
+    padding-bottom: 0.9vw;
+    font-size: 4vw;
+  }
+  #resumenPartida {
+    width: 45vw;
+    height: 25vw;
+  }
+
+  #resumenPartida div {
+    padding: 1vw;
+    font-size: 3.5vw;
+  }
+  .modalFinal button {
+    margin: 2vw;
+    font-size: 3.5vw;
   }
 }
