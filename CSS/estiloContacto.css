@@ -3,7 +3,7 @@
   src: url(../fuentes/Gamer\ Station.ttf);
 }
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 header {
   width: 100%;
@@ -16,7 +16,6 @@ header {
   padding: 7vw;
   box-sizing: border-box;
 }
-
 .letras {
   display: flex;
   flex-grow: 1; /* Añadimos esta propiedad para que las letras ocupen todo el espacio disponible */
@@ -27,35 +26,29 @@ header {
 .letraVerde,
 .letraAmarilla,
 .letraBlanca {
-  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
-    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
-    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
-    1px 30px 60px rgba(16, 16, 16, 0.5);
+  text-shadow: 1px 1px 1px rgb(145, 145, 145), 1px 2px 1px rgb(145, 145, 145),
+    1px 3px 1px rgb(145, 145, 145), 1px 4px 1px rgb(145, 145, 145),
+    1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.5),
+    1px 25px 35px rgba(16, 16, 16, 0.5), 1px 30px 60px rgba(16, 16, 16, 0.5);
   font-family: "miFuente";
   font-weight: bold;
   font-size: 10vw;
 }
-
 .letraRoja {
-  color: red;
+  color: rgb(255, 0, 0);
 }
-
 .letraAzul {
-  color: blue;
+  color: rgb(0, 0, 255);
 }
-
 .letraVerde {
-  color: green;
+  color: rgb(0, 128, 0);
 }
-
 .letraAmarilla {
-  color: yellow;
+  color: rgb(255, 255, 0);
 }
-
 .letraBlanca {
-  color: white;
+  color: rgb(255, 255, 255);
 }
-
 main {
   display: flex;
   justify-content: center;
@@ -70,24 +63,21 @@ main {
   box-shadow: 0 0 5px rgb(255, 255, 255);
   background-color: white;
 }
-
 .formulario label {
   font-weight: bold;
 }
-
 .formulario input {
   width: 90%;
   padding: 1vw;
   margin-bottom: 2vw;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(204, 204, 204);
   border-radius: 5px;
   font-size: 1vw;
 }
-
 .formulario textarea {
   width: 90%;
   padding: 1vw;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(204, 204, 204);
   border-radius: 5px;
   font-size: 1vw;
   resize: vertical; /* Permite redimensionar verticalmente el textarea */
@@ -102,7 +92,7 @@ main {
   margin: auto;
   padding-top: 1vw;
   text-align: center;
-  color: red;
+  color: rgb(255, 0, 0);
 }
 .formulario button {
   margin: 1vw;
@@ -110,10 +100,9 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
-
 @media (max-width: 850px) {
   .cabecera {
     margin: 8vw;
@@ -126,38 +115,31 @@ main {
   .letraBlanca {
     font-size: 17vw;
   }
-
   .formulario {
     width: 60vw;
     height: 65vw;
   }
-
   .formulario label {
     font-size: 3vw;
   }
-
   .formulario input {
     padding: 2vw;
     margin-bottom: 4vw;
     font-size: 3vw;
   }
-
   .formulario textarea {
     padding: 2vw;
     margin-bottom: 3vw;
     font-size: 3vw;
   }
-
   .advertencias {
     width: 25vw;
   }
-
   .formulario button {
     padding: 2vw 4vw;
     font-size: 3vw;
   }
 }
-
 @media (max-width: 500px) {
   .cabecera {
     margin: 25vw;
@@ -173,16 +155,13 @@ main {
   .letraBlanca {
     font-size: 15vw;
   }
-
   .formulario {
     width: 70vw;
     height: 95vw;
   }
-
   .formulario label {
     font-size: 5vw;
   }
-
   .formulario input,
   .formulario textarea {
     padding: 3vw;

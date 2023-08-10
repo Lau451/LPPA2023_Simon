@@ -11,7 +11,6 @@ body {
 header {
   width: 100%;
 }
-
 .cabecera {
   display: flex;
   align-items: center;
@@ -24,63 +23,55 @@ header {
 .letraVerde,
 .letraAmarilla,
 .letraBlanca {
-  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
-    1px 4px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
-    1px 22px 10px rgba(16, 16, 16, 0.5), 1px 25px 35px rgba(16, 16, 16, 0.5),
-    1px 30px 60px rgba(16, 16, 16, 0.5);
+  text-shadow: 1px 1px 1px rgb(145, 145, 145), 1px 2px 1px rgb(145, 145, 145),
+    1px 3px 1px rgb(145, 145, 145), 1px 4px 1px rgb(145, 145, 145),
+    1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.5),
+    1px 25px 35px rgba(16, 16, 16, 0.5), 1px 30px 60px rgba(16, 16, 16, 0.5);
   font-family: "miFuente";
   font-weight: bold;
   font-size: 11vw;
 }
-
 .letraRoja {
-  color: red;
+  color: rgb(255, 0, 0);
 }
-
-.letraAzul {
-  color: blue;
+#ff0000 .letraAzul {
+  color: rgb(0, 0, 255);
 }
-
 .letraVerde {
-  color: green;
+  color: rgb(0, 128, 0);
 }
-
 .letraAmarilla {
-  color: yellow;
+  color: rgb(255, 255, 0);
 }
-
 .letraBlanca {
-  color: white;
+  color: rgb(255, 255, 255);
 }
-
 .contenedor {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .contenedor div {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 15vh;
-  border: solid 0.6vw white;
+  border: solid 0.6vw rgb(255, 255, 255);
 }
 .jugar {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
 }
 .contacto {
-  background-color: blue;
+  background-color: rgb(0, 0, 255);
 }
 .github {
-  background-color: green;
+  background-color: rgb(0, 128, 0);
 }
 .ranking {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
 }
-
 main div a {
   font-size: 3vw;
   font-family: "miFuente";
@@ -89,11 +80,9 @@ main div a {
   user-select: none;
   color: black;
 }
-
 .efecto-zoom {
   transition: transform 0.5s;
 }
-
 @media (max-width: 850px) {
   .letraRoja,
   .letraAzul,
@@ -109,12 +98,10 @@ main div a {
     font-size: 4vw;
   }
 }
-
 @media (max-width: 500px) {
   .cabecera {
     margin: 6vw;
   }
-
   .letraRoja,
   .letraAzul,
   .letraVerde,
@@ -122,14 +109,12 @@ main div a {
   .letraBlanca {
     font-size: 15vw;
   }
-
   .contenedor {
     margin: 5vw;
   }
   .contenedor div {
     margin: 1vh;
   }
-
   main div a {
     font-size: 6vw;
   }
