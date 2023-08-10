@@ -453,6 +453,9 @@ button {
   .active {
     opacity: 1;
   }
+  img {
+    width: 8vw;
+  }
   .modal {
     width: 60vw;
     height: 40vw;

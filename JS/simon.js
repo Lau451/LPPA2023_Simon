@@ -22,8 +22,10 @@ var puntajeTotalTexto = document.getElementById("puntajeTotalTexto");
 var empezarDeNuevo = document.getElementById("reiniciar");
 var penalizacion;
 var puntajeTotal;
+var partidasJugadas = [];
 
 document.addEventListener("DOMContentLoaded", function () {
+  cargarPartidasGuardadas();
   contenedorFinal.classList.add("ocultar");
 });
 
@@ -178,7 +180,7 @@ function actualizarRonda() {
 }
 
 //LocalStorage
-var partidasJugadas = [];
+
 function guardarLocalStorage() {
   var fechaActual = new Date();
   var partidaActual = {
@@ -193,6 +195,12 @@ function guardarLocalStorage() {
   localStorage.setItem("partidasJugadas", JSON.stringify(partidasJugadas));
 }
 
+function cargarPartidasGuardadas() {
+  var partidasGuardadas = localStorage.getItem("partidasJugadas");
+  if (partidasGuardadas) {
+    partidasJugadas = JSON.parse(partidasGuardadas);
+  }
+}
 // Para ir a home
 atras.addEventListener("click", retroceder);
 
