@@ -34,7 +34,7 @@ header {
 .letraRoja {
   color: rgb(255, 0, 0);
 }
-#ff0000 .letraAzul {
+.letraAzul {
   color: rgb(0, 0, 255);
 }
 .letraVerde {
