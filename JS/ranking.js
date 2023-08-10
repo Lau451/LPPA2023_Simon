@@ -30,7 +30,6 @@ function mostrarPartidas(partidas) {
     contenido.appendChild(fila);
   });
 }
-
 if (partidasJugadas) {
   mostrarPartidas(partidasJugadas);
   ordenarPuntaje.addEventListener("click", function () {
@@ -39,7 +38,6 @@ if (partidasJugadas) {
     });
     mostrarPartidas(partidasJugadas);
   });
-
   ordenarFecha.addEventListener("click", function () {
     partidasJugadas.sort(function (a, b) {
       var fechaA = new Date(a.fecha + " " + a.hora);
@@ -54,7 +52,6 @@ if (partidasJugadas) {
 
 // Para ir a home
 atras.addEventListener("click", retroceder);
-
 function retroceder() {
   window.location.href = "index.html";
 }

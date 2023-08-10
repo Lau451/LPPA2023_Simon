@@ -29,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
   contenedorFinal.classList.add("ocultar");
 });
 
-// Function to play the sound
 function reproducir(color) {
   var audio = new Audio("../sonidos/" + color + ".mp3");
   audio.play();
 }
 
-// Function to play the sound of error
 function reproducirError() {
   var audio = new Audio("../sonidos/error.mp3");
   audio.play();
@@ -57,7 +55,6 @@ function empezarJuego() {
 function reiniciar() {
   enCurso = false;
   botones.disabled;
-  botonComenzar.textContent = "Comenzar";
   secuenciaJuego = [];
   secuenciaJugador = [];
   ronda = 1;
@@ -95,7 +92,7 @@ function iluminarBoton(color) {
     botones[i].classList.remove("active");
     if (botones[i].classList.contains(color)) {
       botones[i].classList.add("active");
-      reproducir(color); // Play the sound when the button is highlighted
+      reproducir(color);
       setTimeout(function () {
         for (var i = 0; i < botones.length; i++) {
           botones[i].classList.remove("active");
@@ -122,7 +119,6 @@ function clickJugador(event) {
   secuenciaJugador.push(colorSeleccionado);
   iluminarBoton(colorSeleccionado);
   var rondaActual = secuenciaJugador.length;
-
   if (secuenciaJugador[rondaActual - 1] !== secuenciaJuego[rondaActual - 1]) {
     reproducirError();
     contenedorFinal.classList.remove("ocultar");
@@ -130,7 +126,6 @@ function clickJugador(event) {
     guardarLocalStorage();
   } else {
     puntaje++;
-
     if (rondaActual === ronda) {
       if (ronda === maxRonda) {
         alert("¡Ganaste!");
@@ -180,7 +175,6 @@ function actualizarRonda() {
 }
 
 //LocalStorage
-
 function guardarLocalStorage() {
   var fechaActual = new Date();
   var partidaActual = {
@@ -191,24 +185,21 @@ function guardarLocalStorage() {
     hora: fechaActual.toLocaleTimeString(),
   };
   partidasJugadas.push(partidaActual);
-
   localStorage.setItem("partidasJugadas", JSON.stringify(partidasJugadas));
 }
-
 function cargarPartidasGuardadas() {
   var partidasGuardadas = localStorage.getItem("partidasJugadas");
   if (partidasGuardadas) {
-    partidasJugadas = JSON.parse(partidasGuardadas);
+    partidasJugadas = JSON.parse(partidasGuardadas); //crea arrreglo
   }
 }
+
 // Para ir a home
 atras.addEventListener("click", retroceder);
-
 function retroceder() {
   window.location.href = "index.html";
 }
 atrasModal.addEventListener("click", retrocederModal);
-
 function retrocederModal() {
   window.location.href = "index.html";
 }

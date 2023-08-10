@@ -6,7 +6,6 @@ var parrafo = document.getElementById("advertencias");
 var atras = document.getElementById("img");
 
 formulario.addEventListener("submit", validaciones);
-
 function validaciones(e) {
   e.preventDefault();
   var advertencias = "";
@@ -44,7 +43,6 @@ function enviarCorreo() {
 
 // Para ir a home
 atras.addEventListener("click", retroceder);
-
 function retroceder() {
   window.location.href = "index.html";
 }
